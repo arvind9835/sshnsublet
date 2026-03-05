@@ -31,6 +31,19 @@
       cursor: pointer;
     }
 
+	button_multiline{
+      display: block;
+      margin: 20px auto;
+      padding: 15px 40px;
+      font-size: 12px;
+      border-radius: 8px;
+      background-color: #F37021;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+	  
     button:hover{
       background-color: #1a5dcc;
     }
@@ -69,7 +82,7 @@
 	  border: none;
 	  cursor: pointer;
 	}
-
+	
 	.button-row button:hover {
 	  background-color: #d85b00; /* slightly darker on hover */
 	}
@@ -90,9 +103,9 @@
 
   <button onclick="refreshSheet()">Refresh Sheet</button>
 
-  <button onclick="window.open('https://docs.google.com/spreadsheets/d/1Wev7JY5ejtrpVcGTTa_RikkTQALzbbddqUv8DfNpheQ/edit?usp=sharing')">
-    View in Google Sheet(Recommended)
-  </button>
+  <button_multiline onclick="window.open('https://docs.google.com/spreadsheets/d/1Wev7JY5ejtrpVcGTTa_RikkTQALzbbddqUv8DfNpheQ/edit?usp=sharing')">
+    View in Google Sheet<br>(Recommended)
+  </button_multiline>
 
 
 <div class="container">
@@ -122,4 +135,5 @@
 </body>
 
 </html>
+
 
