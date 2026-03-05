@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Sublet Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body{
+      font-family: Arial;
+      margin:0;
+      background: #f5f7fb;
+    }
+
+    header{
+      background: #F37021;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button{
+      display: block;
+      margin: 20px auto;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 8px;
+      background-color: #F37021;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover{
+      background-color: #1a5dcc;
+    }
+
+    .container{
+      width: 95%;
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    iframe{
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px 0;
+      background:#f7f3ea;
+    }
+	.button-row {
+	  display: flex;
+	  justify-content: center;  /* center buttons horizontally */
+	  gap: 20px;                /* space between buttons */
+	  margin-bottom: 20px;
+	}
+
+	.button-row button {
+	  padding: 15px 30px;
+	  font-size: 16px;
+	  border-radius: 8px;
+	  background-color: #F37021; /* your orange color */
+	  color: white;
+	  border: none;
+	  cursor: pointer;
+	}
+
+	.button-row button:hover {
+	  background-color: #d85b00; /* slightly darker on hover */
+	}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Student Room Sublets| Onderhuur van studentenkamers</h1>
+  <p>Find temporary housing easily| Vind gemakkelijk tijdelijke woonruimte</p>
+</header>
+
+<div class="button-row">
+  <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScDt6M-P3QZFKlhWG83B1ZTJP81HsXF_6Hs2pYt_MNYxrOTBg/viewform?usp=dialog')">
+    Post a Room
+  </button>
+
+  <button onclick="refreshSheet()">Refresh Sheet</button>
+
+  <button onclick="window.open('https://docs.google.com/spreadsheets/d/1Wev7JY5ejtrpVcGTTa_RikkTQALzbbddqUv8DfNpheQ/edit?usp=sharing')">
+    View in Google Sheet
+  </button>
+</div>
+
+
+<div class="container">
+  <!-- Google Sheet iframe -->
+  <iframe id="sheetFrame" 
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxy2GfZ2e97B0vGI-iVTrAHrFROOaj6Okw7WWNa_T04S2htRUOuZIy5cyBvBRBBQwVu8t1RVWTN8lR/pubhtml?gid=234411873&single=true" 
+      frameborder="0">
+  </iframe>
+</div>
+
+<footer>
+  <p>© 2025 Designed and managed by Dr. Arvind Kumar. For any suggestion/queries contact arvind9835@gmail.com</p>
+  <a href="https://www.hitwebcounter.com/" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=21465836&style=0006&nbdigits=5&type=page&initCount=0" 
+         title="Free Tools" alt="Free Tools" border="0" />
+  </a>
+</footer>
+
+<script>
+  // Function to refresh the iframe
+  function refreshSheet(){
+    const iframe = document.getElementById('sheetFrame');
+    iframe.src = iframe.src + ''; // reloads the iframe
+  }
+</script>
+
+</body>
+</html>

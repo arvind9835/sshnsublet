@@ -1,0 +1,27 @@
+.ButtonShadow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:20px;   /* existing */
+  margin-top:20px;      /* ADD THIS */
+}
+.button-row {
+  display: flex;
+  justify-content: center;  /* center buttons horizontally */
+  gap: 20px;                /* space between buttons */
+  margin-bottom: 20px;
+}
+
+.button-row button {
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #F37021; /* your orange color */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: #d85b00; /* slightly darker on hover */
+}
